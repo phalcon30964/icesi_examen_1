@@ -60,13 +60,13 @@ public class Puente {
         //puente.acquire();
 
         mutex.acquire();//para que entre carros no modifique todos al tiempo la variable
-
-        disponibilidadCoches.acquire(); // quita un espacio del ṕuente------------------------
-
-        carros = carros + 1; // entra el carro al puente
-        if (carros == 1) {
+        
+        if (carros == 0) {
             puente.acquire();// si es el primero de este tipo coge el puente para los de la derecha
         }
+        
+        disponibilidadCoches.acquire(); // quita un espacio del ṕuente------------------------
+        carros = carros + 1; // entra el carro al puente
 
         System.out.println(carros);
 
