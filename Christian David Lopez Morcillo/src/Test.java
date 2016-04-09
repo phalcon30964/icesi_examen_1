@@ -10,7 +10,8 @@ public class Test {
             p1.start();
         }
        
-        for (int i = 1; i < 11; i++) {
+        for (int i = 0; i < 10; i++) {
+            
             CochesDcha p2 = new CochesDcha(p, i);
             p2.start();
         }
